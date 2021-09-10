@@ -1,0 +1,215 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+.flex{
+  display: flex;
+}
+body{
+  background-color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  font-size: clamp(12px, 10vw, 16px);
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+img{
+  object-fit: cover; /* garder ratio d'une image  */
+  display: block;
+  max-width: 100%;  /* will shrink if no room left */
+}
+div{
+  height: auto;
+}
+button{
+  width: 50%;
+  border-radius: 1px;
+  border: 1px solid #333333;
+  background-color: #333333;
+  padding: 1% 3% 1% 3%;
+  /* padding: top right bottom left*/
+  transition: background-color .5s;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: clamp(13px, 10vw, 18px);
+  line-height: 30px;
+  font-weight: 500;
+  justify-content: center;
+  align-self: center;
+}
+button:hover {
+  color: #FFFFFF !important;
+  /* background-color: #2EA2C8; */
+  /* border: 1px solid #2EA2C8 !important; */
+  background: #5D6095;
+  border: 1px solid #5D6095 !important;
+  cursor: pointer;
+}
+button a{
+  color: #FFFFFF;
+}
+button a:hover{
+  color: #333333;
+}
+p{
+  font-size: clamp(12px, 10vw, 16px);
+}
+h1, h2, h3, h4, h5, h6{
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h1{
+  font-size: clamp(35px, 7vw, 50px);
+}
+h2{
+  font-size: clamp(14px, 7vw, 20px);
+}
+h1 a{
+  color: #333333;
+}
+h1 a:hover{
+  /* color: #2EA2C8; */
+  color: #5D6095;
+}
+a{
+  text-decoration: none;
+  color: #333333;
+  transition: color .5s;
+}
+a:hover{
+  /* color: #2EA2C8; */
+  color: #5D6095;
+}
+li{
+  list-style: none;
+}
+.bold{
+  font-weight: 700;
+}
+
+/* Header */
+.nav{
+  min-height: 10vh;
+  justify-content: space-around;
+}
+.logo{
+  justify-content: center;
+  align-items: center;
+}
+.nav-links{
+  min-width: 20%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+.shopping-cart-digit{
+  margin-left: -10%;
+  font-size: clamp(11px, 10vw, 16px);
+}
+
+/* Side nav */
+.sidenav{
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: none;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+
+/* Main */
+main{
+  margin-left: 200px; /* same as the width of the sidenav */
+  min-height: 60vh;
+  /* justify-content: center;
+  align-items: center; */
+}
+.load-more{
+  width: 20%;
+}
+
+/* Footer */
+footer{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-links{
+  min-width: 70vw;
+  gap: 3%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.socialmedia{
+  min-width: 70vw;
+  margin: 2%;
+  gap: 3%;
+  justify-content: center;
+  align-items: center;
+}
+.copyright{
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(11px, 10vw, 16px);
+  text-transform: none;
+}
+
+
+/* Media queries */
+@media screen and (max-width: 360px){
+  
+}
+@media screen and (max-width: 375px){
+  .nav-links{
+    min-width: 62% !important;
+  }
+}
+@media screen and (max-width: 414px){
+  .nav-links{
+    min-width: 52% !important;
+  }
+  main{
+    min-height: 30vh;
+  }
+  .sidenav{
+    display: none;
+  }
+  .footer-links{
+    flex-direction: column;
+    margin: 10%;
+  }
+  .socialmedia{
+    margin: 10%;
+  }
+  .copyright{
+    margin-top: 5%;
+  }
+}
+@media screen and (max-width: 768px){
+  /* create burger menu */
+  .nav-links{
+    min-width: 35%;
+  }
+  .socialmedia{
+    margin: 6%;
+  }
+}
+
+/* Breakpoints - most common screen size devices used in 2021:
+1920×1080
+1366×768 
+360×640 => Galaxy S5
+414×896 => iPhone 6/7/8+
+1536×864
+375×667 => iPhone X
+768x1024 => iPad */
