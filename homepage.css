@@ -10,7 +10,7 @@ html{
   display: flex;
 }
 body{
-  background: url(../src/images/pexels-alex-andrews.png) no-repeat;
+  /* background: url(../src/images/pexels-alex-andrews.png) no-repeat; */
   background-color: #FFFFFF;
   font-family: Arial, Helvetica, sans-serif;
   color: #333333;
@@ -102,11 +102,12 @@ li{
   align-items: center;
 }
 .nav-links{
-  min-width: 20%;
+  min-width: 20%; 
   justify-content: space-around;
   align-items: center;
   margin-left: auto;
   flex-wrap: wrap;
+  border: solid purple 2px;
 }
 .shopping-cart-digit{
   margin-left: -10%;
@@ -125,15 +126,18 @@ li{
   background-color: none;
   overflow-x: hidden;
   padding-top: 20px;
-  /* border: solid purple 2px; */
+  border: solid purple 2px;
 }
 
 /* Main */
 main{
-  margin-left: 200px; /* same as the width of the sidenav */
+  /* margin-left: 200px; same as the width of the sidenav */
   min-height: 60vh;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
+}
+.homepage-img{
+  max-width: 70%;
 }
 .load-more{
   width: 20%;
@@ -187,11 +191,8 @@ footer{
   }
 }
 @media screen and (max-width: 414px){
-  body{
-    background: #FFFFFF; /* homepage only */
-  }
   .nav-links{
-    min-width: 52% !important;
+    min-width: 52%;
   }
   main{
     min-height: 30vh;
@@ -213,10 +214,14 @@ footer{
 @media screen and (max-width: 768px){
   /* create burger menu */
   .nav-links{
-    min-width: 35%;
+    min-width: 50%;
   }
   .sidenav{
     height: 50%;
+    width: 25%;
+  }
+  main{
+    margin: 0;
   }
   .socialmedia{
     margin: 6%;
